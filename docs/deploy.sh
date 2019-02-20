@@ -15,12 +15,12 @@ popd
 
 # configure nginx
 sudo rm -f /etc/nginx/sites-enabled/default
-sudo cp -f ./nginx-config /etc/nginx/sites-available/example
+sudo cp -f ./docs/nginx-config /etc/nginx/sites-available/example
 sudo ln -fs /etc/nginx/sites-available/example /etc/nginx/sites-enabled
 sudo service nginx reload
 
 # install pm2 and start the node server as a daemon
-cd ..
+#cd ..
 sudo npm install pm2 -g -y
 pm2 delete example -s
 pm2 start server.js -n example
