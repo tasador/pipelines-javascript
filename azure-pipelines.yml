@@ -35,5 +35,6 @@ steps:
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
+    replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
